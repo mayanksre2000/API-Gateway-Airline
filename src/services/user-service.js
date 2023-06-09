@@ -8,7 +8,7 @@ async function create(data) {
     try {
         const user = await userRepo.create(data);
         const role = await roleRepo.getRoleByName(Enums.USER_ROLES_ENUMS.CUSTOMER);
-        user.addRole(role);
+        user.addRole(role); //inbuilt
         return user;
     } catch(error) {
         console.log(error.name);

@@ -31,7 +31,7 @@ async function checkAuth(req, res, next) {
         }
     } catch(error) {
         return res
-                .status(error.statusCode)
+                .status(StatusCodes.BAD_GATEWAY)
                 .json(error);
     }
     
